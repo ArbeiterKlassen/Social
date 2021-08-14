@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Boundless-UI</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/pace-theme-flash.css">
+    <link rel="stylesheet" href="../css/d-audio.css">
+    <link rel="stylesheet" href="../css/myPagination.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../img/user.jpeg">
+    <style rel="stylesheet">
+        .lazy-image {
+            background: url('../img/loading.gif') no-repeat center;
+            background-size: 26% 35%;
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--PC导航栏-->
+    <nav class="nav-bar-holder">
+        <div class="nav-bar" id="nav-bar">
+            <div class="logo-box">
+                <a href="index.html" class="blog-title ta-c"><img style="vertical-align: top;" alt="logo"
+                        src="../img/user.jpeg" /></a>
+            </div>
+            <div class="nb-a-holder" id="home"><a id="active" class="nb-a ta-c" href="index.html">首页</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="category.html">分类</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="archive.html">归档</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="link.html">友情链接</a></div>
+        </div>
+    </nav>
+    <!--mobile导航栏-->
+    <nav class="mobile-nav">
+        <div class="logo-box">
+            <a href="index.html" class="blog-title ta-c">
+                <img style="vertical-align: top;" alt="logo"
+                    src="../img/user.jpeg" /></a>
+        </div>
+        <a id="mobile_cate" style="background-image: url('../img/cate.svg')" href="javascript:void(0);"></a>
+    </nav>
+    <ul id="nav-m-list">
+        <li id="cancel-li"><a class="fr" id="cancel" href="javascript:void(0);"></a></li>
+        <li id="m-img-li">
+            <img id="m-img" alt="苍茫误此生" src="../img/user.jpeg">
+        </li>
+        <li>
+            <span class="search-s fl">
+                <label for="search-input-m"></label><input class="fl" type="text" id="search-input-m" placeholder="关键词">
+                <a class="search-icon fl" onclick="m_search()" href="javascript:void(0);"></a>
+            </span>
+        </li>
+        <li><a class="w-h-100 fl" href="index.html">首页</a></li>
+        <li><a class="w-h-100 fl" href="category.html">分类</a></li>
+        <li><a class="w-h-100 fl" href="archive.html">归档</a></li>
+        <li><a class="w-h-100 fl" href="link.html">友情链接</a></li>
+    </ul>
+    <div id="d-audio" class="d-audio" style="width: 150px; z-index: 99; position: fixed; bottom: 5px; left: 5px;"></div>
+    <!--主体-->
+    <div class="big-container" id="particles-js">
+        <article class="article">
+            <div class="nb-a-holder">
+                <!--网页介绍-->
+                <div class="column-container">
+                    <ul class="column_box" id="like-box">
+                        <li class="column-title">
+                            <span class="at-sort b-b-ece fl"><a class="at-sort-comment-a c-666 fl">网站介绍</a></span>
+                        </li>
+                        <li class="person-img-li">
+                            <img alt="头像" id="person-img"
+                                src="../img/user.jpeg">
+                        </li>
+                        <li class="person-intro-detail gradient-text">
+                            <h1>欢迎光临这个博客</h1>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>网站简介：基于Go+Vue，用于发布社会分析/批判文章</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>信仰：马克思主义+列宁主义+毛泽东思想</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>搭建者：ArbeiterKlassen</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>基于Github搭建</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>关于我们：请见友情链接</h3>
+                        </li>
+                    </ul>
+                </div>            
+            </div>
+            <!--个人简介-->
+            <div class="nb-a-holder">
+                <div class="column-container">
+                    <ul class="column_box" id="like-box">
+                        <li class="column-title">
+                            <span class="at-sort b-b-ece fl"><a class="at-sort-comment-a c-666 fl">个人介绍</a></span>
+                        </li>
+                        <li class="person-img-li">
+                            <img alt="头像" id="person-img"
+                                src="../img/builder.jpeg">
+                        </li>
+                        <li class="person-intro-detail gradient-text">
+                            <h1>Hallo! Mine Name ist ArbeiterKlassen!</h1>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>这基本是一个GIthub网站模板（笑）</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>马列毛主义者，但研究不深</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>是MC玩家+P社爱好者+音游人</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>音游主打Phigros+MuseDash+Malody</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>高中生，在学德语</h3>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>（这已经是全盘托出了⑧）</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nb-a-holder">
+                <div class="column-container">
+                    <ul class="column_box" id="like-box">
+                        <li class="column-title">
+                            <span class="at-sort b-b-ece fl"><a class="at-sort-comment-a c-666 fl">个人介绍</a></span>
+                        </li>
+                        <li class="person-img-li">
+                            <img alt="头像" id="person-img"
+                                src="../img/CDS.jpeg">
+                        </li>
+                        <li class="person-intro-detail gradient-text">
+                            <h1>共产主义民主学习小组</h1>
+                        </li>
+                        <li class="person-intro-detail">
+                            <h3>由诸多同志创建的共产主义民主学习小组。这是一个属于共产主义信仰者、学习者；安那其-康米主义者、社会民主主义者激进派共同的组织</h3>
+                            <h3>坚持<strong>共产主义 民主主义 唯物主义 适当的国际主义和爱国主义将共产主义，唯物主义和民主主义同国内国际实践相结合。坚持"讨论思辨，学习实践"</strong><br>...</h3>
+                            <span class="description"><a href="https://arbeiterklassen.github.io/self/CDS_intro.html">详见小组介绍</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--文章-->
+            <div class="left-holder">
+                <!--文章内容-->
+                <div id="article-holder" style="width: 100%; float: left">
+                    <div class="article-box">
+                        <div class="ab-content">
+                            <a href="../articles/论信息化资本主义.html" class="article-img-box">
+                                <img class="lazy-image article-img" data-src="../essays_img/marx1.jpeg" alt="" src="">
+                            </a>
+                            <div class="article-title">
+                                <a href="article.html">论信息化资本主义</a>
+                            </div>
+                            <div class="article-detail-box c-666">
+                                自20世纪40至50年代起，电子计算——即后来的计算机的兴起促使社会生产力大幅提高。90年代后互联网在全球普及，美国的苹果、微软等公司腾飞；随之而来的Twitter,Facebook,Youtube等社交视频网站开始在网民中得到信任和推广，成为全球性的社交网站。
+                            </div>
+                            <span class="article-tail-box">
+                                <i class="fl"
+                                    style="background-image: url('https://zhaoyangkun.gitee.io/blog-static/img/read-index.svg')"></i>
+                                <span class="read-number c-999 fl">47</span>
+                                <i class="fl"
+                                    style="background-image: url('https://zhaoyangkun.gitee.io/blog-static/img/comment-index.svg')"></i>
+                                <span class="comment-number c-999 fl">0</span>
+                                <span class="article-date c-999">2021-5-6</span>
+                                <span class="article-author one-line-overflow c-999">Fashiung</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="article-box">
+                        <div class="ab-content">
+                            <a href="../articles/中产阶级扩大论.html" class="article-img-box">
+                                <img class="lazy-image article-img" data-src="../essays_img/marx1.jpeg" alt="" src="">
+                            </a>
+                            <div class="article-title">
+                                <a href="article.html">中产阶级扩大论</a>
+                            </div>
+                            <div class="article-detail-box c-666">
+                                马克思主义论述：中产阶级，即小资产阶级实际上是无产阶级中的特殊组成部分，占有少部分的生产资料，但不属于大资产阶级。既可以单独作为社会阶级之一，也可以划分进无产阶级之内。
+  中产阶级，中产阶层，小资产阶级等词汇同义。
+
+  本文部分观点和论述来源：
+
+  1975.11月刊《红旗》杂志发表的《请看苏修的新玩意儿》
+
+  Faschiung-《论信息化资本主义》
+                            </div>
+                            <span class="article-tail-box">
+                                <i class="fl"
+                                    style="background-image: url('https://zhaoyangkun.gitee.io/blog-static/img/read-index.svg')"></i>
+                                <span class="read-number c-999 fl">47</span>
+                                <i class="fl"
+                                    style="background-image: url('https://zhaoyangkun.gitee.io/blog-static/img/comment-index.svg')"></i>
+                                <span class="comment-number c-999 fl">0</span>
+                                <span class="article-date c-999">2021-3-13</span>
+                                <span class="article-author one-line-overflow c-999">Faschiung</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!--分页指示器-->
+                <div id="pagination" class="pagination fl"></div>
+            </div>
+        </article>
+    </div>
+    <!--尾部-->
+    <footer class="footer">
+        <div class="footer-line">
+            <div class="icon-center">
+                <span class="icon-box"><a id="github-icon" target="_blank" href="https://github.com/zhaoyangkun"
+                        class="foot-icon"></a>
+                </span>
+                <span class="icon-box"><a id="qq-icon" target="_blank"
+                        href="tencent://Message/?Uin=2295098032&amp;websiteName=q-zone.qq.com&amp;Menu=yes"
+                        class="foot-icon"></a>
+                </span>
+            </div>
+        </div>
+        <div class="footer-line">Powerde By <a href="https://github.com/zhaoyangkun/Boundless-UI"
+                target="_blank">BoundlessUI</a> • © 2019</div>
+        <div class="footer-line">浙ICP备88888888号 <a href="" target="_blank">站点地图</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/pace.min.js"></script>
+    <script type="text/javascript" src="../js/base.js"></script>
+    <script type="text/javascript" src="../js/d-audio.js"></script>
+    <script type="text/javascript" src="../js/myPagination.js"></script>
+    <script type="text/javascript">
+        // 分页
+        const pagination = new myPagination({
+            id: 'pagination',
+            curPage: 1, //初始页码
+            pageTotal: 3, //总页数
+            pageAmount: 10, //每页多少条
+            dataTotal: 29, //总共多少条数据
+            pageSize: 3, //可选,分页个数
+            //showPageTotalFlag: true, //是否显示数据统计
+            //showSkipInputFlag: true, //是否支持跳转
+            getPage: function (page) {
+                console.log("current page: ", page);
+            }
+        });
+        // 图片懒加载
+        const lazyImage = new LazyImage('.lazy-image');
+    </script>
+</body>
+
+</html>

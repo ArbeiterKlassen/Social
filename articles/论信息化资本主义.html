@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+        <title>论信息化资本主义</title>
+
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/pace-theme-flash.css">
+    <link rel="stylesheet" href="../css/d-audio.css">
+    <link rel="stylesheet" href="../css/article-detail.css">
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/github-markdown.css">
+    <link rel="stylesheet" href="../css/vditor.css">
+    <link rel="shortcut icon" href="../img/user.jpeg">
+    <style>
+        .lazy-image {
+            background: url('../img/loading.gif') no-repeat center;
+            background-size: 26% 35%;
+            height: 100%;
+            width: 100%;
+        }
+
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+
+            .markdown-body h1 {
+                font-size: 1.35em;
+            }
+
+        }
+
+        .codehilite {
+            border-radius: 10px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+        }
+
+        #outerdiv {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 200;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--PC导航栏-->
+    <nav class="nav-bar-holder">
+        <div class="nav-bar" id="nav-bar">
+            <div class="logo-box">
+                <a href="../templates/index.html" class="blog-title ta-c"><img style="vertical-align: top;" alt="logo"
+                        src="../img/user.jpeg" /></a>
+            </div>
+            <div class="nb-a-holder" id="home"><a class="nb-a ta-c" href="../templates/index.html">首页</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="../templates/category.html">分类</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="../templates/archive.html">归档</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="../templates/link.html">友情链接</a></div>
+        </div>
+    </nav>
+    <!--mobile导航栏-->
+    <nav class="mobile-nav">
+        <div class="logo-box">
+            <a href="../templates/index.html" class="blog-title ta-c">
+                <img style="vertical-align: top;" alt="logo" src="../img/user.jpeg" /></a>
+        </div>
+        <a id="mobile_cate" style="background-image: url('../img/cate.svg')" href="javascript:void(0);"></a>
+    </nav>
+    <ul id="nav-m-list">
+        <li id="cancel-li"><a class="fr" id="cancel" href="javascript:void(0);"></a></li>
+        <li id="m-img-li">
+            <img id="m-img" alt="苍茫误此生" src="../img/user.jpeg">
+        </li>
+        <li>
+            <span class="search-s fl">
+                <label for="search-input-m"></label><input class="fl" type="text" id="search-input-m" placeholder="关键词">
+                <a class="search-icon fl" onclick="m_search()" href="javascript:void(0);"></a>
+            </span>
+        </li>
+        <li><a class="w-h-100 fl" href="../templates/index.html">首页</a></li>
+        <li><a class="w-h-100 fl" href="../templates/category.html">分类</a></li>
+        <li><a class="w-h-100 fl" href="../templates/archive.html">归档</a></li>
+        <li><a class="w-h-100 fl" href="../templates/link.html">友情链接</a></li>
+    </ul>
+    <div id="d-audio" class="d-audio" style="width: 150px; z-index: 99; position: fixed; bottom: 5px; left: 5px;"></div>"
+    <div class="toc">
+        <ul>
+            <li>
+                <a href="#1">引言</a>
+            </li>
+            <li>
+                <a href="#2">正文</a>
+                <ul>
+                    <li><a href="#2.1">（一）控制论资本主义的特征</a></li>
+                    <li><a href="#2.2">（二）政治、思潮与互联网</a></li>
+                    <li><a href="#2.3">（三）选择性信息</a></li>
+                    <li><a href="#2.4">（四）垄断的加剧</a></li>
+                    <li><a href="#2.5">（五）信息的资本化</a></li>
+                    <li><a href="#2.6">（六）实际反应</a></li>
+                    <li><a href="#2.7">（七）总结</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!--主体-->
+    <section class="main">
+        <label for="article_id"></label><input hidden id="article_id" name="article_id" value="55">
+        <label for="user_id"></label><input hidden id="user_id" name="user_id"
+            value="{{ no such element: django.contrib.sessions.backends.cache.SessionStore object[&#39;user_id&#39;] }}">
+        <div class="left-box">
+            <div id="outerdiv">
+                <div id="innerdiv" style="position:absolute;"><img alt id="bigimg"
+                        style="box-shadow: 0 0 10px rgba(0,0,0,0.38)" src="" />
+                </div>
+            </div>
+            <!--文章内容-->
+            <div class="article-container">
+                <div class="article-content markdown-body">
+
+                        <h1 style="margin: 10px 0">论信息化资本主义</h1>
+                    <div class="writer-info">
+                        <span style="margin: 5px 0;">作者: </span>
+                        <span id="writer">Fashiung </span>
+                        <span id="write-time">2021-5-6 20:13:10</span>
+
+                    </div>
+                    <p>
+                        <h2 id="1"><br>引言:<br></h2>
+                          2020年以来，著名网络游戏《Cyberpunk 2077》火爆互联网。游戏剧情内所描述的社会形式——控制论资本主义（Cybernetic Capitalism）引起社会学者的广泛思考<br>
+
+                          互联网的日益发达使政治思潮在所谓“第二世界”——互联网的虚拟世界快速传播。<br>
+                          我的朋友，ArbeiterKlassen（引自德语，意味工人阶级）即在互联网传播马克思主义学说；我本人也在互联网宣传中接受各种批判与指责。<br>
+                          ArbeiterKlassen:”我们是在敌人的平台传播自己的思想。”<br>
+                          由此引发这里的论述。<br>
+                          本文用以系统阐述信息化的资本主义，即控制论资本主义。<br><br>
+
+                        <h2 id="2"><br>正文：<br></h2>
+
+<h3 id="2.1"><br>（一）控制论资本主义的特征<br><br></h3>
+  自20世纪40至50年代起，电子计算——即后来的计算机的兴起促使社会生产力大幅提高。90年代后互联网在全球普及，美国的苹果、微软等公司腾飞；随之而来的Twitter,Facebook,Youtube等社交视频网站开始在网民中得到信任和推广，成为全球性的社交网站。Google一类的搜素引擎因配套推广和本身的优秀性能而得到大众接受。从早期的宽带拨号上网到今日的互联网搜索，各类网络信息获取工具层出不穷。20年的互联网垄断竞争结束，今日互联网呈现出：“西方油管脸书推特，中国微信QQ微博”、“百小家争鸣，一大家独大”的现象。这即为互联网的占领垄断。与占领垄断配套的是“信息垄断”。这是控制论资本主义的一个重要特征。<br>
+  2020年美国大选中的党争向我们完美诠释了何为信息垄断。以前总统特朗普为例：几个月以前在推特上高谈“让美国再次伟大”的他却在拜登当政后光速隐退，他的推特账号被美国媒体和推特公司以涉及政治为由关停，今日全球互联网上特朗普的受关注度快速降低，几近消失。仅仅是民众对他的政治热情消退了吗？必定有媒体和网络对有关特朗普的信息进行干涉和“限流”的因素。<br>
+  这给我们上了生动的一课——在西方世界，也就是资本主义世界，信息化的资本家无视法律地依靠信息干涉政治宣传，干涉一切对他们的垄断不利的活动。<br>
+  他们与垄断资本主义社会传统的工业和金融资本家区别不大，都对所属领域进行垄断，都在想方设法的扩大政治权利以实现政治垄断，且信息资本家和金融资本家正在联合起来。区别在于他们以信息宣传为手段干涉民众思想和行为，而传统资本家倾向于单纯的体力劳动和经济剥削。<br>
+<br>
+  控制型资本主义的最大特点在于对民众强大的控制性。也许现在并没有让人民彻底被控制，但互联网确实在思想上承担思想控制的重要使命。例如搜索引擎给拥护定向投放广告。若广告都可以特定推送，又有什么是不可以的呢？<br>
+  又例如某国际视频网站。如果你是一名中国用户，你收到的视频便充斥着“文革时期”等类似的敏感内容，其内容又充斥着诋毁、造谣。可见，资本主义对思想的控制达到前所未有的高峰。<br>
+  信息化的资本家凭借其对信息资本的垄断优势地位，指定维护其本身利益的法律，并利用法律打击竞争的资产阶级，为自己的利益开路。这个利益通常是传统行业的数倍。大信息化资本家的垄断极端加剧，使得贫富差距进一步拉大。<br>
+<h3 id="2.2"><br>（二）政治、思潮与互联网<br><br></h3>
+  我们从第一部分了解到互联网对政治的干涉。<br>
+  正面上，互联网似乎促进了政务公开，政治似乎更民主了，幕后呢？<br>
+  政务公开仍是选择性推送的信息。把控互联网的资本家会删除威胁他们统治和利益的言论。正如COVID-19疫情中的印度政府得知感染人数激增后便下令删除对他们不利的言论数百条。但Twitter呢？他们与美国政府挂钩——他们自然将印度政府的政策公布出来，去降低印度的国际声望，以维护美国的霸权，进而让美国信息化资本主义的垄断达到新的高峰。<br>
+<br>
+  互联网在这时起舆论宣传作用。一句话，今日之互联网是信息资本家控制人民思想的工具，互联网推送的信息多少体现统治阶级——大资产阶级的意志。<br>
+<h3 id="2.3"><br>（三）选择性信息<br><br></h3>
+  我和ArbeiterKlassen讨论过这个问题，但结论的有些部分来自于我们对信息化资本主义之后发展的猜想，故不完全肯定。<br>
+  游戏《Cyberpunk 2077》展现的社会：暴力，控制，剥削，同时具有奴役人的特征。转向现实的信息化资本主义社会，其压迫和剥削的性质则更加暴露而愈演愈烈。996,007,715三大工时制度成为了修正主义中国社会的一大常态。<br>
+  我不向往美国硝烟和病毒的空气，故不了解美国工人阶级和中产阶级。总有一些东西却让我了解到美国社会——网络，主要是社交平台和搜索引擎。它们给我带来一些不一样的东西，或许是“最真实的信息”？有“武汉病毒”；“苏联的铁幕政治”；“中苏的虚伪民主”，令人眼花缭乱。再如国内“春晚观看人数90%以上”一类的假作派。这是选择性信息的冰山一角。美国在前者中，展现的是其维护自身统治。更黑暗的呢？在社会主义国家中，互联网不乏是不分国内外的资产阶级对人民输出思想的主战场之一。互联网协助资产阶级向无产阶级传播自由主义思潮，使他们腐化，从而从根基上瓦解无产阶级政权。他们的文化输出在中国、越南、前苏联（俄罗斯）等国无疑成功了。<br>
+  美国为什么没有多少人站起来推翻资产阶级？美国共产党为什么没有夺取政权？主要原因使美国无产阶级，广大受教育的中产阶级以及美国共产党员的腐化。他们正是犯了右倾投降主义，跳进了资产阶级的圈套里！<br>
+  那些色情网站为什么能在中国肆无忌惮？为什么中国解放28年后又出现了妓女？这就是美国的和平演变计划和奶头乐计划的具体体现。政治上，中国全面修正主义；经济上，中国全面自由化；文化上，右倾投降派占了上风！通过网络。无产阶级放弃斗争，这就是信息化资本主义的“控制之处”。<br>
+<h3 id="2.4"><br>（四）垄断的加剧<br><br></h3>
+  先前，垄断资本主义社会已有各行业的卡特尔，卓迪加。他们组成同时垄断各行业的大卡特尔，卓迪加。又扩展向国际化。科技革命以来，美国通过互联网的民用化，将资本分散到新兴国家，进而进行资本输出。在其经济发展时进行资本回流，进而把控国家经济命脉。1997年亚洲金融风暴亦是如此。<br>
+  过去的生产工具的交易是A-B的，从A到B，且B交易后拥有对生产工具的自主权。但现在，生产工具被大企业垄断，生产工具的贸易被冠以“借”。大资本家赋予其“专利”，使得其在需要时被“还”给信息资本家，又让消费者哑口无言。我们看到，现在的电子消费市场上，CPU制造被INTEL，AMD，IBM垄断，显示卡被NVIDIA垄断，操作系统则被苹果，微软，谷歌三大家垄断。消费者所购买的产品随时有被“收回”和“扩收专利”的风险。电脑整体作为生产工具的商品属性被信息化垄断改变了，同时，信息垄断资本家依靠计算机这一新的生产工具垄断各行各业。<br>
+  消费者这时受到间接的剥削，正印证了马克思主义“剩余价值就是能使资本增殖的价值”这句话。<br>
+<br>
+  在信息化资本主义社会，一切产业被一两家信息垄断巨头把控，资本增殖的速度前所未有。垄断从各行各业的资本家的“单干”变成几个信息资本家的大型垄断。垄断空前加剧。<br>
+  大多数资本家或使把控的产业破产倒闭，或将自己变成大信息资本家在某一产业的代理人。<br>
+  则资本的集中垄断是信息化资本主义的一个特征。<br>
+<h3 id="2.5"><br>（五）信息的资本化<br><br></h3>
+  讲这章前，我们先给信息资本下个定义：信息资本分为实质信息资本和非实质信息资本。<br>
+  实质信息资本主要是计算工具，主要是CPU，显示卡等；非实质信息资本则是信息、名望及潜在影响力（知识也是一种非实质信息资本）<br>
+  信息的资本化展现的是，在信息化资本主义社会中，一切物质和意识都可以产生利润。这使得信息具有价值。<br>
+  信息本身具有时效性。历史上，人们“百里加急”传递书信，后来有了报纸，电话，电报。一切都是为了信息利润的最大化，现在有了互联网，美国将互联网传播到人民中，安插到世界上，并不是因为他们良心发现，只是这样做更有利于他们的监控行动，能获取更大的利益，更有利于资本家的意图罢了。<br>
+  为了使非实质信息资本的价值最大化，他们借政府之手发表所谓的《专利法》，任何个人——包括并不限于资本家或中产阶级等等，想要获取这些专利知识时，都会被垄断知识产权的信息资本家狠狠地敲诈一笔。那些被敲诈的传统资本家又从工人手中剥削出他们的损失。最终仍是垄断的进一步加强，社会的进一步撕裂和阶级对立的进一步暴露！<br>
+<br>
+<h3 id="2.6"><br>（六）实际反应<br><br></h3>
+  本章主要论述两类信息资本的融合。<br>
+  生产工具从内燃机演进到计算机，逐渐走向复杂化；货币体系不断虚拟化，这就是人类社会发展阶段——信息化资本主义社会的体现。中国目前的网络支付由腾讯，阿里巴巴两大公司把持，其下辖的社交软件——QQ，微信又全方位垄断了人民的社交生活。又如新浪微博中如此“公知”鼓吹新自由主义，反对社会主义，污蔑历史。大部分视频平台引入推送机制，集中推送观众喜好内容，又不乏“夹带私货”。这就是信息化资本主义对人民思想上，文化上，经济上，生活上，政治上全面的控制。<br>
+  假以时日，信息化资本主义将彻底控制无产阶级，将其削弱成为没有反抗的奴隶！<br>
+<h3 id="2.7"><br>（七）总结<br><br></h3>
+  控制是信息化资本主义的一大特征，但不是实质。信息化资本主义的真正实质是“信息化”，“奴役化”的剥削。<br>
+  列宁主义“帝国主义是资本主义的最高阶段”便指出了“帝国主义是资本主义的垂死阶段”。信息化资本主义就是它垂死的过程之一。它只是垄断资本主义——帝国主义在科技革命中的“换汤不换药”罢了！<br>
+  我有位老朋友整日鼓吹社会达尔文主义，他现在提出“控制型资本主义社会是乌托邦”。<br>
+  当然是，是信息资本家——尤其是把握政权的那一部分的乌托邦！<br>
+<br>
+  我们从以上的论述总结出以下几点：<br>
+  1.信息化资本主义的特征在于信息的资本化和信息资本的垄断；<br>
+  2.信息资本的垄断通常扩大到各行各业；<br>
+  3.信息化资本主义的实质是“信息化”，“奴役化”的剥削。<br>
+  4.信息化资本主义通常以全球性的“控制”作为利益手段。<br>
+  5.信息化资本主义是帝国主义垂死过程中的一部分。<br>
+<br><br>
+  我们看到了，信息化资本主义社会已然出现了，它一经出现，便谋划着一场充斥血与肮脏的华丽演出。这场华丽演出并不仅仅是列宁《帝国主义是资本主义的最高阶段》中无产阶级革命的前夜，更是无产阶级最后的战场。若今日无产阶级再不拿起前人的武器——马克思列宁主义，再不发展这套思想，无产阶级的革命斗争就要被掩盖在漫天乌云下，无产阶级就要被彻底压迫，彻底剥削！无产阶级在这个斗争中只是将永远失去枷锁，他们得到的将是整个世界！<br>
+  我们要干的，是追赶这阶级矛盾愈发尖锐的时期，我们要吃下资本家的糖衣，将这炮弹原封不动的打回去！我们要和资产阶级再来一次殊死搏斗，进行全世界的大革命，建立全世界的无产阶级政权！<br>
+<br><br>
+  全世界无产者，联合起来！<br>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--尾部-->
+    <footer class="footer">
+        <div class="footer-line">
+            <div class="icon-center">
+                <span class="icon-box"><a id="github-icon" target="_blank" href="https://github.com/zhaoyangkun"
+                        class="foot-icon"></a>
+                </span>
+                <span class="icon-box"><a id="qq-icon" target="_blank"
+                        href="tencent://Message/?Uin=2295098032&amp;websiteName=q-zone.qq.com&amp;Menu=yes"
+                        class="foot-icon"></a>
+                </span>
+            </div>
+        </div>
+        <div class="footer-line">Powerde By <a href="https://github.com/zhaoyangkun/Boundless-UI"
+                target="_blank">BoundlessUI</a> • © 2019</div>
+        <div class="footer-line">浙ICP备88888888号 <a href="" target="_blank">站点地图</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/pace.min.js"></script>
+    <script type="text/javascript" src="../js/base.js"></script>
+    <script type="text/javascript" src="../js/d-audio.js"></script>
+    <script type="text/javascript" src="../js/vditor.min.js"></script>
+    <script type="text/javascript" src="../js/article-detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            showProcessingMessages: false, //关闭js加载过程信息
+            messageStyle: "none", //不显示信息
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath:  [ ["$", "$"] ], //行内公式选择$
+                displayMath: [ ["$$","$$"] ], //段内公式选择$$
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'], //避开某些标签
+                ignoreClass:"comment-content" //避开含该Class的标签
+            },
+            "HTML-CSS": {
+                availableFonts: ["STIX","TeX"], //可选字体
+                showMathMenu: false //关闭右击菜单显示
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>
+    <script type="text/javascript" defer>
+        //图片懒加载
+        const lazyImage = new LazyImage('.lazy-image');
+    </script>
+</body>
+</html>
+    

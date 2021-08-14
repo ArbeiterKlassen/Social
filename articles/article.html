@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>栈和队列</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/pace-theme-flash.css">
+    <link rel="stylesheet" href="../css/d-audio.css">
+    <link rel="stylesheet" href="../css/article-detail.css">
+    <link rel="stylesheet" href="../css/code.css">
+    <link rel="stylesheet" href="../css/github-markdown.css">
+    <link rel="stylesheet" href="../css/vditor.css">
+    <link rel="shortcut icon" href="../img/user.jpeg">
+    <style>
+        .lazy-image {
+            background: url('../img/loading.gif') no-repeat center;
+            background-size: 26% 35%;
+            height: 100%;
+            width: 100%;
+        }
+
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        @media (max-width: 767px) {
+            .markdown-body {
+                padding: 15px;
+            }
+
+            .markdown-body h1 {
+                font-size: 1.35em;
+            }
+
+        }
+
+        .codehilite {
+            border-radius: 10px;
+        }
+
+        .article-content img {
+            max-width: 100%;
+        }
+
+        #outerdiv {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgba(0, 0, 0, 0.3);
+            display: none;
+            z-index: 200;
+        }
+    </style>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!--PC导航栏-->
+    <nav class="nav-bar-holder">
+        <div class="nav-bar" id="nav-bar">
+            <div class="logo-box">
+                <a href="index.html" class="blog-title ta-c"><img style="vertical-align: top;" alt="logo"
+                        src="../img/user.jpeg" /></a>
+            </div>
+            <div class="nb-a-holder" id="home"><a class="nb-a ta-c" href="index.html">首页</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="category.html">分类</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="archive.html">归档</a></div>
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="link.html">友情链接</a></div>
+        </div>
+    </nav>
+    <!--mobile导航栏-->
+    <nav class="mobile-nav">
+        <div class="logo-box">
+            <a href="index.html" class="blog-title ta-c">
+                <img style="vertical-align: top;" alt="logo" src="../img/user.jpeg" /></a>
+        </div>
+        <a id="mobile_cate" style="background-image: url('../img/cate.svg')" href="javascript:void(0);"></a>
+    </nav>
+    <ul id="nav-m-list">
+        <li id="cancel-li"><a class="fr" id="cancel" href="javascript:void(0);"></a></li>
+        <li id="m-img-li">
+            <img id="m-img" alt="苍茫误此生" src="../img/user.jpeg">
+        </li>
+        <li>
+            <span class="search-s fl">
+                <label for="search-input-m"></label><input class="fl" type="text" id="search-input-m" placeholder="关键词">
+                <a class="search-icon fl" onclick="m_search()" href="javascript:void(0);"></a>
+            </span>
+        </li>
+        <li><a class="w-h-100 fl" href="index.html">首页</a></li>
+        <li><a class="w-h-100 fl" href="category.html">分类</a></li>
+        <li><a class="w-h-100 fl" href="archive.html">归档</a></li>
+        <li><a class="w-h-100 fl" href="link.html">友情链接</a></li>
+    </ul>
+    <div id="d-audio" class="d-audio" style="width: 150px; z-index: 99; position: fixed; bottom: 5px; left: 5px;"></div>
+    <!--文章目录-->
+    <div class="toc">
+        <ul>
+            <li><a href="#_1">二. 栈和队列</a>
+                <ul>
+                    <li><a href="#1">1. 栈</a>
+                        <ul>
+                            <li><a href="#1_1">(1) 概念</a></li>
+                            <li><a href="#2">(2) 数据结构</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#2_1">2. 队列</a>
+                        <ul>
+                            <li><a href="#1_2">(1) 概念</a></li>
+                            <li><a href="#2_2">(2) 数据结构</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!--主体-->
+    <section class="main">
+        <label for="article_id"></label><input hidden id="article_id" name="article_id" value="55">
+        <label for="user_id"></label><input hidden id="user_id" name="user_id"
+            value="{{ no such element: django.contrib.sessions.backends.cache.SessionStore object[&#39;user_id&#39;] }}">
+        <div class="left-box">
+            <div id="outerdiv">
+                <div id="innerdiv" style="position:absolute;"><img alt id="bigimg"
+                        style="box-shadow: 0 0 10px rgba(0,0,0,0.38)" src="" />
+                </div>
+            </div>
+            <!--文章内容-->
+            <div class="article-container">
+                <div class="article-content markdown-body">
+                    <h1 style="margin: 10px 0">栈和队列</h1>
+                    <div class="writer-info">
+                        <span style="margin: 5px 0;">作者: </span>
+                        <span id="writer">admin </span>
+                        <span id="write-time">2019-12-05 23:45:29</span>
+                    </div>
+                    <h2 id="_1">二. 栈和队列</h2>
+                    <h3 id="1">1. 栈</h3>
+                    <h4 id="1_1">(1) 概念</h4>
+                    <p>栈只能在<strong>一端</strong>进行插入或者删除操作，插入元素称为入栈，删除元素称为出栈。</p>
+                    <p>在存储结构上分为<strong>顺序栈</strong>和<strong>链栈</strong>。主要特点是<strong>先进后出（FILO）</strong>。</p>
+                    <p>n个元素入栈（满足先进后出原则），所获得的元素排列数目 N 为：</p>
+                    <p>$ N = \frac{1}{n+1}C_{2n}^{n} $</p>
+                    <h4 id="2">(2) 数据结构</h4>
+                    <h3 id="2_1">2. 队列</h3>
+                    <h4 id="1_2">(1) 概念</h4>
+                    <p>队列只允许<strong>在一端（队尾 rear）</strong>插入数据（入队），<strong>另一端（队头
+                            front）</strong>删除数据（出队）。特点是<strong>先进先出</strong>，类似于隧道。可分为<strong>顺序队</strong>和<strong>链队</strong>。
+                    </p>
+                    <h4 id="2_2">(2) 数据结构</h4>
+                    <p>顺序队：</p>
+                    <p>链队：</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--尾部-->
+    <footer class="footer">
+        <div class="footer-line">
+            <div class="icon-center">
+                <span class="icon-box"><a id="github-icon" target="_blank" href="https://github.com/zhaoyangkun"
+                        class="foot-icon"></a>
+                </span>
+                <span class="icon-box"><a id="qq-icon" target="_blank"
+                        href="tencent://Message/?Uin=2295098032&amp;websiteName=q-zone.qq.com&amp;Menu=yes"
+                        class="foot-icon"></a>
+                </span>
+            </div>
+        </div>
+        <div class="footer-line">Powerde By <a href="https://github.com/zhaoyangkun/Boundless-UI"
+                target="_blank">BoundlessUI</a> • © 2019</div>
+        <div class="footer-line">浙ICP备88888888号 <a href="" target="_blank">站点地图</a>
+        </div>
+    </footer>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+    <script type="text/javascript" src="../js/pace.min.js"></script>
+    <script type="text/javascript" src="../js/base.js"></script>
+    <script type="text/javascript" src="../js/d-audio.js"></script>
+    <script type="text/javascript" src="../js/vditor.min.js"></script>
+    <script type="text/javascript" src="../js/article-detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            showProcessingMessages: false, //关闭js加载过程信息
+            messageStyle: "none", //不显示信息
+            extensions: ["tex2jax.js"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+            tex2jax: {
+                inlineMath:  [ ["$", "$"] ], //行内公式选择$
+                displayMath: [ ["$$","$$"] ], //段内公式选择$$
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'], //避开某些标签
+                ignoreClass:"comment-content" //避开含该Class的标签
+            },
+            "HTML-CSS": {
+                availableFonts: ["STIX","TeX"], //可选字体
+                showMathMenu: false //关闭右击菜单显示
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </script>
+    <script type="text/javascript" defer>
+        //图片懒加载
+        const lazyImage = new LazyImage('.lazy-image');
+    </script>
+</body>
+
+</html>
