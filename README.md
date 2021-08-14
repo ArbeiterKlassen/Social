@@ -1,7 +1,7 @@
 # Social
 学习马克思主义的中一些思考
 <br>
-查看方法：https://arbeiterklassen.github.io/social<br>
+查看方法：https://arbeiterklassen.github.io/Social<br>
 联系方式：<br>
     Email:<br>
         deepdarkfantasyvan@Outlook.com<br>
