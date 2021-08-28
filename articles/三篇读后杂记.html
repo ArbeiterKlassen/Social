@@ -1,0 +1,438 @@
+
+<!DOCTYPE html>
+
+<html lang="zh-cmn-Hans">
+
+
+
+<head>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <meta name="HandheldFriendly" content="true">
+
+    <meta charset="UTF-8">
+
+    <meta name="keywords" content="">
+
+    <meta name="description" content="">
+
+    <meta name="author" content="">
+
+    
+    <link rel="stylesheet" href="../css/global.css">
+
+    <link rel="stylesheet" href="../css/pace-theme-flash.css">
+
+    <link rel="stylesheet" href="../css/d-audio.css">
+
+    <link rel="stylesheet" href="../css/article-detail.css">
+
+    <link rel="stylesheet" href="../css/code.css">
+
+    <link rel="stylesheet" href="../css/github-markdown.css">
+
+    <link rel="stylesheet" href="../css/vditor.css">
+
+    <link rel="shortcut icon" href="../img/user.jpeg">
+
+    <style>
+
+        .lazy-image {
+
+            background: url('../img/loading.gif') no-repeat center;
+
+            background-size: 26% 35%;
+
+            height: 100%;
+
+            width: 100%;
+
+        }
+
+
+
+        .markdown-body {
+
+            box-sizing: border-box;
+
+            min-width: 200px;
+
+            max-width: 980px;
+
+            margin: 0 auto;
+
+            padding: 10px;
+
+        }
+
+
+
+        @media (max-width: 767px) {
+
+            .markdown-body {
+
+                padding: 15px;
+
+            }
+
+
+
+            .markdown-body h1 {
+
+                font-size: 1.35em;
+
+            }
+
+
+
+        }
+
+
+
+        .codehilite {
+
+            border-radius: 10px;
+
+        }
+
+
+
+        .article-content img {
+
+            max-width: 100%;
+
+        }
+
+
+
+        #outerdiv {
+
+            width: 100%;
+
+            height: 100%;
+
+            position: fixed;
+
+            top: 0;
+
+            left: 0;
+
+            background: rgba(0, 0, 0, 0.3);
+
+            display: none;
+
+            z-index: 200;
+
+        }
+
+    </style>
+
+    <!--[if lt IE 9]>
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+
+    <![endif]-->
+
+</head>
+
+
+
+<body>
+
+    <!--PC导航栏-->
+
+    <nav class="nav-bar-holder">
+
+        <div class="nav-bar" id="nav-bar">
+
+            <div class="logo-box">
+
+                <a href="../templates/index.html" class="blog-title ta-c"><img style="vertical-align: top;" alt="logo"
+
+                        src="../img/user.jpeg" /></a>
+
+            </div>
+
+            <div class="nb-a-holder" id="home"><a class="nb-a ta-c" href="../templates/index.html">首页</a></div>
+
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="../templates/category.html">分类</a></div>
+
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="../templates/archive.html">归档</a></div>
+
+            <div class="nb-a-holder"><a class="nb-a ta-c" href="../templates/link.html">友情链接</a></div>
+
+        </div>
+
+    </nav>
+
+    <!--mobile导航栏-->
+
+    <nav class="mobile-nav">
+
+        <div class="logo-box">
+
+            <a href="../templates/index.html" class="blog-title ta-c">
+
+                <img style="vertical-align: top;" alt="logo" src="../img/user.jpeg" /></a>
+
+        </div>
+
+        <a id="mobile_cate" style="background-image: url('../img/cate.svg')" href="javascript:void(0);"></a>
+
+    </nav>
+
+    <ul id="nav-m-list">
+
+        <li id="cancel-li"><a class="fr" id="cancel" href="javascript:void(0);"></a></li>
+
+        <li id="m-img-li">
+
+            <img id="m-img" alt="苍茫误此生" src="../img/user.jpeg">
+
+        </li>
+
+        <li><a class="w-h-100 fl" href="../templates/index.html">首页</a></li>
+
+        <li><a class="w-h-100 fl" href="../templates/category.html">分类</a></li>
+
+        <li><a class="w-h-100 fl" href="../templates/archive.html">归档</a></li>
+
+        <li><a class="w-h-100 fl" href="../templates/link.html">友情链接</a></li>
+
+    </ul>
+
+    <div id="d-audio" class="d-audio" style="width: 150px; z-index: 99; position: fixed; bottom: 5px; left: 5px;"></div>"
+
+        <title>三篇读后杂记</title>
+
+    <!--主体-->
+
+    <section class="main">
+
+        <label for="article_id"></label><input hidden id="article_id" name="article_id" value="55">
+
+        <label for="user_id"></label><input hidden id="user_id" name="user_id"
+
+            value="{{ no such element: django.contrib.sessions.backends.cache.SessionStore object[&#39;user_id&#39;] }}">
+
+        <div class="left-box">
+
+            <div id="outerdiv">
+
+                <div id="innerdiv" style="position:absolute;"><img alt id="bigimg"
+
+                        style="box-shadow: 0 0 10px rgba(0,0,0,0.38)" src="" />
+
+                </div>
+
+            </div>
+
+
+            <!--文章内容-->
+            <div class="article-container">
+
+                <div class="article-content markdown-body">
+
+
+                        <h1 style="margin: 10px 0">三篇读后杂记</h1>
+                    <div class="writer-info">
+                        <span style="margin: 5px 0;">作者: </span>
+                        <span id="writer">ArbeiterKlassen </span>
+                        <span id="write-time">2021-8-27 0:0:0</span>
+                    </div>
+  <br>文笔太烂，只是记录，勿喷 <br>
+  <h3 style="text-align: center;" id="1"> 读恩格斯《家庭，私有制和国家的起源》有感</h3><br>
+
+  人类社会的历史自古分为几个阶段：远古时期——原始社会——奴隶社会——封建社会——资本主义社会——现今。<br>
+
+  从远古时代开始的部族聚落的原始公社制，到农业革命兴起后的聚居，再到私有制和国家的兴起，从原始公有制转变为社会的私有制，从荒原上的一个部落到一座座城邦的兴起，从庞大的氏族体系到今日千千万万的家庭，仅仅1万3000年，人类完成了历史上的伟大进步。我们回望这段历史，不由自主的发问：什么导致了家庭，私有制和国家的诞生？<br>
+
+  《家庭，私有制和国家的起源》是由卡尔 马克思的“第二提琴手”和战友——F.恩格斯创作的社会学著作，它很好的解释了这个问题。<br>
+
+  不妨将眼光看到整个历史的进程上，人类总体的生活水平上。它有没有在发展？它在发展，不然人类至今还过着原始人茹毛饮血的生活，不然哪来那么多先进的科技？人类的生活水平的提高靠的是什么？靠的是火的燃烧，靠的是石矛飞过天空，靠的是马车轱辘的吱呀声，靠的是蒸汽机的蒸腾声......归根到底，靠的是人类生产的进步，靠的是人类生产力的进步。<br>
+
+  所以，人类生活的发展靠的是生产力的进步，人类历史的决定性因素就必定是生产的进步，是人类的生产资料和生活资料的生产的进步，以及人类自身生产——即繁衍的进步。前者的发展愈高，人类的绝对生活水平就越高，后者发展愈高，则人类的发展速度越快。两者的共同作用就是人类社会的不断进步。<br>
+
+  但是，人类社会总体的发展应当导致整体生活水平的提高，为什么在古埃及或古罗马有祭祀，贵族和奴隶平民之分，为什么有领主和农奴，为什么有近现代的资本家和工人？<br>
+
+  先将资本家和工人，祭祀和奴隶这些矛盾统一成人这个总体来看。为什么有他们的对立？最初是因为，祭祀负责管理粮仓和宗教，奴隶负责建设，资本家最早负责财务收支的管理，工人负责操作具体的生产。说明，这些对立的阶级的基础之一是社会各个工作的分工。<br>
+
+  那么，如果没有粮仓，没有粮食，没有机器和资本，是否就没有分工了呢？<br>
+
+  翻过农业革命之前，人类还处在原始社会，而农业革命在全球各个人类聚居地开展了以后，物质便丰富了起来，也出现了阶级。深入说，就是人类生产力的提高带来的物质生活的积累，由于社会的分工而无法平均分配到所有人，最终总会有一些剩余，这些剩余产品就被积累到一部分人身上，最终他们成为了祭祀，国王贵族。可以看出，私有制和对立的阶级的基础之一是人类生产的剩余产品的增加，这是它的物质基础。<br>
+
+  再看家庭。我们看出，远古时期的亚欧大陆，群体的迁徙通常是以族群形式的。南俄草原上印欧语系的传播证实了它：向西，印欧语言像树的枝杈一样分裂出不同的语族和语支，例如凯尔特语支，日耳曼语族和波罗的-斯拉夫语族，它们又独立发展出各个语言，产生各个部落，古罗马时代的中欧平原上的日耳曼部落就是例子。部落逐渐合并，产生古不列颠的王国，此时社会基本组织变成一个一个的家族——如古代中国的家族一样。近代以来，这些家族又不断的分裂，产生一个一个家庭。现在，社会的不断发展使得家庭也逐渐分裂。<br>
+
+  社会的基本组成由庞大的氏族部落演化到现在的家庭，说明社会的发展导致了社会的基本劳动单位的逐渐个体化——从群体劳动到个人雇佣的劳动。。借此，可以连成一串——劳动的分工和剩余产品的积累奠定了私有制的产生，劳动单位的个体化决定了私有制，私有制下社会生产力的不断发展反而继续促进劳动的个体化。人类规模的迅速发展——亚欧的联系发展和美洲的开拓则加快了交换这个人类本能行为的普及，促进私有制的普及。私有制的发展产生了新的阶级。<br>
+
+  而古罗马有斯巴达克起义，古代中国各个王朝的起义数不胜数，它们的最终结果不是推翻建立新的社会制度就是延续这个制度。这就说明，私有制的条件下，阶级矛盾本质上不可调和，国家就必然作为缓和或者暴力解决阶级矛盾的工具出现。它是社会分工，私有制，阶级和阶级矛盾发展的必然结果。国家本质上是在经济上占统治地位的阶级用来镇压和剥削被压迫阶级的工具。<br>
+
+  这时，家庭，国家和私有制的起源就一目了然，归根到底是生产力即社会本身的发展的必然。它也必然随着社会进一步发展到共产主义社会而被消灭。<br>
+
+  <br>
+
+  这本书让我对人类社会的具体发展进程和它的内部机制，内部动力有了深刻的了解。它对发展和完善马克思主义，起到重要作用。当下，我们仍然可以用这本书的生产理论思想和它对社会发展的总结，分析和研究当下国际社会的进一步发展。<br>
+
+  <h3 style="text-align: center;" id="2">读《水浒传》有感</h3><br>
+
+  《水浒传》是我国古代，也是世界文学罕有的一部描写农民革命斗争的长篇小说，它的产生，跟我国文学史上许多家喻户晓、为人民喜爱的名著一样，是有进步思想的文人作者采取民间流传的群众创作，加工再创作而成的。北宋末，宋江等一百单八人揭竿起义。到了南宋，在民-族-矛-盾和阶级斗争持续剧烈发展的历史背景下，这些起义英雄为人民群众倾心爱慕，广泛流传，以致纷纷起而效尤。北宋腐朽政权面对严重“内忧外患”，一贯对外屈降，对内镇压。<br>
+
+  镇压了内部，才可以偷生苟安混下去。但这个政权“民穷、财匮、兵弱、士大夫无耻”，他们哪有力量“安内”？说宋江在京东起事，宋徽宗此时对蠢蠢欲动的金国视而不理，却唯独想拔出宋江这眼中尖丁，不久，北宋亡国了。南宋统治者是更加无耻的投降主义者，而当时南北广大人民群众对金统治者侵扰是坚决抗战的。<br>
+
+  他们一批批建立山寨水寨，对金反侵略、反扩张，对宋反投降、反压迫；与南宋统治者相对立，形成大是大非黑白分明的阵线。苟延残喘的南宋统治者处此局势，当年侯蒙的献策“不若赦江，使讨方腊以自赎”自然而然成为他们“安内”最好的政策。宋江等一百单八人聚义梁山，受招安征方腊的事，在民间流传了几百年。人们痛骂误国的奸臣贼子，比照之下，对巨盗宋江之流深表敬慕和赞赏。赞说其：“不假称王，而呼保义，岂若狂卓”。《水浒》以至史事是有必要的。<br>
+
+  这一百单八人，每人都有别号和姓名，而且有性格和故事。有花石纲、杨志卖刀、取生辰纲、晁盖落草、宋江杀惜上山以及受招安、征方腊、封节度使等段子，所记情节曲折，人物丰富，性格生动。人物故事发展起来了连接紧密，流畅自然。这些都是从南宋百多年来所谓“街谈巷议”，慢慢积累起来，而后被采取过来，经作者深度加工，成为这流传百年的名著。在《水浒》中，一个个英雄形象都创造成深刻的社会典型，他们通过斗争和考验而走向革命，最后把自己无保留地融合在农民革命的洪流里，这就是水浒英雄逼上梁山的道路。在水浒英雄中，一些人物出身于中上层阶级，满心指望为封建朝廷出力，以期博得个封妻荫子，这本来是一种封建的正统愿望。可是，在腐朽的赵氏王朝的没落年代里，全部政权都掌握在排除异己的“六贼”集团手中，就是这样一部分文官武将的“忠心”的“正统”的愿望，也都难以实现。<br>
+
+  《水浒传》反映了一个腐朽的封建王朝的社会现状，反映了封建官僚贵族和底层人民之间的阶级对立，深刻描写了一百单八将起义，顶峰到衰落的全过程。这是这本小说最值得赞赏的。同时，水浒全篇深刻描写的人物——宋江的人物形象值得深入品味。<br>
+
+  宋江最开始反宋朝的统治，符合了大部分人民的愿望，但是宋江本人的性格是内在矛盾的，当他心理的支持起义一方超过了渴望权力一方时，他必定更加支持起义，直到他坐拥一百单八将领头人的位置，权力的扩大使他贪权贪财的性格暴露出来，沦为被招安的对象。朝廷也正是看重他这一点，成功将其捉拿。综合来看，南宋统治者是腐朽的投降主义者，宋江则更是原来的阶级局限性打败的机会主义者。他的背叛也直接导致了起义的失败。宋江的一生是由不愿革命到走向革命以至最后叛变革命的三部曲。<br>
+
+  《水浒传》最大的价值就是向我们揭示了投降主义机会主义者的下场。<br>
+
+  像关胜、呼延灼、秦明等人做梦也想不到“背反朝廷”，去梁山落草。可是，在封建统治阶级与农民义军的尖锐的矛盾里，作为维护封建政权的“打手”，他们不可避免的命运，就是要把生命卷入到这场你死我活的斗争里。而正义是在农民义军方面。《水浒传》为广大读者展示一个别样精彩而真实的宋代社会。《水浒传》是“英雄传奇”的开山之作，是中国最杰出的古典长篇白话小说之一。数百年来，风行宇内，虽屡遭禁毁，仍然保持着长久的生命力。其思想之伟大，见地之超远，为古今人不能及也。”《水浒》抒发对现实社会的感想，文笔从容、蕴藉，饶有趣味。<br>
+
+
+  <h3 style="text-align: center;" id="3">读亚当斯密《国富论》有感</h3><br>
+
+  现代，全世界几乎所有国家的经济模式都是市场经济。回望工业革命和更远的英国光荣革命，市场经济在欧洲确立起来并随着殖民扩张被在全世界确立。<br>
+
+  而市场经济总是有原则的，有一套根本的运行法则的。现代有凯恩斯的市场经济学，在它之前呢？在欧洲各国还处在封建社会和资本主义社会过渡的时期呢？这便是亚当斯密和他的《国富论》。<br>
+
+  这本书的出版，奠定着工业革命的古典派政治经济学的建立，为推动资本主义商品经济的发展奠定了基础。但是，它的思想也只能推动资本主义理论百年的发展，到一百年后，第二次工业革命时，经济危机频频爆发时，政治经济学就需要新的发展了——马克思主义政治经济学。<br>
+
+  这本书讲了什么？<br>
+
+  第一篇，亚当斯密肯定了社会分工的作用——提高生产效率，进而提高生产力。同时，他首次提出了资本主义下商品的价值和使用价值的区分，首次提出社会生产中的地租，工资等等在内的资本和劳动力的生产要素。<br>
+
+  第二篇，主要研究了资本的性质、构成、积累和用途。在这一篇中，最先明确地说明了资本的构成可分为固定资本和流动资本，区分了生产劳动和非生产劳动，论述了资本的各种形态，即借贷资本、工业资本和商业资本之间的区分。前两篇基本上包括了斯密政治经济学理论的所有内容。<br>
+
+  第三篇，从经济史的角度，对促进或阻碍国民财富发展的原因作了分析，主要考察了罗马帝国崩溃到18世纪后期的经济发展史，研究了国家的经济政策对财富生产发展的作用。从历史角度出发，论证了只有采用自由放任的经济政策，才会有利于分工和国民财富的发展。<br>
+
+  第四篇，从经济思想史的角度出发，对历史上的重商和重农主义以及各种封建经济政策做了分析比较和批判，进一步论证了自由放任的资本主义市场经济的必要性。<br>
+
+  第五篇，研究的是国家财政收支对国民财富发展的影响。斯密强调了必须采取合理的财政制度，使国家的收入大于支出，促使资本的积累，才能增加国民财富。<br>
+
+  放在当时带有封建性质的资本主义社会，这样的经济学研究是较为深刻的。因为它正确的揭示了社会分工。但是，亚当斯密站在封建地主阶级和资产阶级的角度，不能深刻理解人性在各个时代和各个阶级之间不同的表现，用一个资产阶级的人性概括所有阶级，这是不恰当的。同时，亚当斯密没有正确分清价值和使用价值不同的决定条件，没有完全分析清市场经济的逻辑，就不能正确理解经济危机的发生原因，而是将其简单的概括为利率和黄金白银贸易的不对等导致的资本外流和国家经济政策的不配套。这在现在看来是唯心主义的世界观。<br>
+
+  尽管亚当斯密“市场是一只看不见的手，可以自我调节”的理论多么完美，他也无法解释经济危机的根本爆发原因——市场经济的生产和需求的不对等，生产社会会和生产资料私有的矛盾。<br>
+
+  唯心主义的世界观是不能完全解释清历史，经济，人文社会诸方面的发展规律的。黑格尔虽然提出了辩证法，但也是基于人性的，伦理的辩证法。只有马克思第一次使用了以费尔巴哈的唯物主义为基础的，以人民为根本的科学的辩证法，创造出一套科学且不断发展的政治经济学。<br>
+
+  不能完全否定《国富论》的历史作用，它将古典哲学，历史学，心理学和古典的政治经济学集大成，总结出一套简明朴素却有漏洞的古典政治经济学，推动了工业革命的发展。但是我们应该在古典经济学——直到凯恩斯经济学，马克思主义政治经济学的基础上，客观理性的分析社会经济，运用唯物史观和辩证法，对政治经济一词有更深的理解。<br>
+
+            </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!--尾部-->
+
+    <footer class="footer">
+
+        <div class="footer-line">
+
+            <div class="icon-center">
+
+                <span class="icon-box"><a id="github-icon" target="_blank" href="https://github.com/zhaoyangkun"
+
+                        class="foot-icon"></a>
+
+                </span>
+
+                <span class="icon-box"><a id="qq-icon" target="_blank"
+
+                        href="tencent://Message/?Uin=2295098032&amp;websiteName=q-zone.qq.com&amp;Menu=yes"
+
+                        class="foot-icon"></a>
+
+                </span>
+
+            </div>
+
+        </div>
+
+        <div class="footer-line">Powerde By <a href="https://github.com/zhaoyangkun/Boundless-UI"
+
+                target="_blank">BoundlessUI</a> • © 2019</div>
+
+        <div class="footer-line">浙ICP备88888888号 <a href="" target="_blank">站点地图</a>
+
+        </div>
+
+    </footer>
+
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+
+    <script type="text/javascript" src="../js/sweetalert.min.js"></script>
+
+    <script type="text/javascript" src="../js/pace.min.js"></script>
+
+    <script type="text/javascript" src="../js/base.js"></script>
+
+    <script type="text/javascript" src="../js/d-audio.js"></script>
+
+    <script type="text/javascript" src="../js/vditor.min.js"></script>
+
+    <script type="text/javascript" src="../js/article-detail.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <script type="text/x-mathjax-config">
+
+        MathJax.Hub.Config({
+
+            showProcessingMessages: false, //关闭js加载过程信息
+
+            messageStyle: "none", //不显示信息
+
+            extensions: ["tex2jax.js"],
+
+            jax: ["input/TeX", "output/HTML-CSS"],
+
+            tex2jax: {
+
+                inlineMath:  [ ["$", "$"] ], //行内公式选择$
+
+                displayMath: [ ["$$","$$"] ], //段内公式选择$$
+
+                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre','code','a'], //避开某些标签
+
+                ignoreClass:"comment-content" //避开含该Class的标签
+
+            },
+
+            "HTML-CSS": {
+
+                availableFonts: ["STIX","TeX"], //可选字体
+
+                showMathMenu: false //关闭右击菜单显示
+
+            }
+
+        });
+
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+
+    </script>
+
+    <script type="text/javascript" defer>
+
+        //图片懒加载
+
+        const lazyImage = new LazyImage('.lazy-image');
+
+    </script>
+
+</body>
+
+</html>
+
+    
